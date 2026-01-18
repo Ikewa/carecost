@@ -1,73 +1,34 @@
-# React + TypeScript + Vite
+# CareCost - Health & Fintech Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+CareCost is a React-based "Health Operating System" that correlates personal wellness data with financial health. It gamifies the experience of managing a health budget while tracking physical vitals.
 
-Currently, two official plugins are available:
+**Live Demo:** [Insert Vercel Link Here]
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Tech Stack
+* **Core:** React (Vite), TypeScript
+* **State Management:** React Context API + LocalStorage (Persistency)
+* **UI/UX:** Material UI (MUI v6), Lucide React
+* **Data Visualization:** Recharts (Dynamic pie & area charts)
+* **Routing:** React Router DOM
 
-## React Compiler
+## 🚀 Key Features
+* **Financial Engine:** Dynamic budget tracking with "Solo" vs. "Family" plan switching.
+* **Marketplace Logic:** Simulated e-commerce system where purchases deduct from the global health budget.
+* **Health Analytics:** Daily logging system (Exercise, Nutrition, Mood) that calculates a gamified "Health Score."
+* **Data Persistence:** Uses a custom hook to sync application state with browser LocalStorage, ensuring data survives refreshes.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+# 1. Initialize Git
+git init
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+# 2. Add all files
+git add .
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+# 3. Commit
+git commit -m "Initial commit: Complete CareCost MVP"
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+# 4. Link to your GitHub (Go create a repo on GitHub.com first!)
+git remote add origin https://github.com/YOUR_USERNAME/care-cost.git
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+# 5. Push
+git push -u origin master
